@@ -1,8 +1,8 @@
 readme_content = """# Debuk Shop — Advanced Bookstore Management & Content Management Ecosystem
 
 ### Course Code: IMS566 (Advanced Web Design Development and Content Management)
-### Project Type: Individual Assignment Prototype (Weightage: 20%)
-### Developed By: Muhd Izham Haiqal (Information Systems, IM245)
+### Project Type: Individual Assignment Prototype
+### Developed By: Muhd Izham Haiqal Bin Mohd Zamzuri
 ### Academic Institution: Universiti Teknologi MARA (UiTM) Puncak Perdana
 
 ---
