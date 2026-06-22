@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Dashboard | Debuk Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Debuk Shop.</a>
+            
+            <div class="search-wrapper">
+                <input type="text" id="global-search" class="search-input" placeholder="Search books..." disabled style="cursor: not-allowed; opacity: 0.5;">
+                <span class="search-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </span>
+            </div>
+
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="cart.html">Cart <span id="cart-count">(0)</span></a>
+                <a href="payment.html">Payment</a>
+                <a href="contact.html">Contact Us</a>
+                 <a href="#" id="auth-nav-btn" class="auth-btn-highlight">Login</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container section-padding" id="dashboard-main-view">
+        <header class="dashboard-header-block">
+            <span class="subtitle" id="dashboard-welcome-tag">Operational Overview</span>
+            <h1 class="page-title">Performance Analytics</h1>
+        </header>
+
+        <div class="metrics-grid">
+            <div class="metric-card-box">
+                <span class="metric-label">Lifetime Units Sold</span>
+                <h2 class="metric-value" id="stat-books" data-target="100">0</h2>
+                <span class="metric-trend text-free">↑ Dynamic Sync</span>
+            </div>
+            
+            <div class="metric-card-box">
+                <span class="metric-label">Gross Store Revenue</span>
+                <h2 class="metric-value" id="stat-revenue" data-target="2000">0</h2>
+                <span class="metric-trend text-free">↑ Live Processing</span>
+            </div>
+            
+            <div class="metric-card-box">
+                <span class="metric-label">Active Channel Session</span>
+                <h2 class="metric-value" id="stat-live-readers">0</h2>
+                <span class="metric-trend text-free" id="stat-traffic-status">● Live Stream</span>
+            </div>
+        </div>
+
+        <div class="dashboard-charts-row">
+            <div class="chart-visual-card">
+                <h3 class="chart-card-title">Live Traffic Volume</h3>
+                <p class="chart-card-subtitle" id="dashboard-traffic-subtitle">Unique Visitors Today</p>
+                <div class="dashboard-graph-wrapper">
+                    <canvas id="visitorChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-visual-card">
+                <h3 class="chart-card-title">Genre Popularity Index</h3>
+                <p class="chart-card-subtitle">Volume distribution across curated collections</p>
+                <div class="dashboard-graph-wrapper">
+                    <canvas id="genreDemandChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="auth-modal-overlay" id="auth-modal">
+        <div class="auth-modal-card">
+            <button class="auth-close-btn" id="auth-close-btn">&times;</button>
+            <div id="auth-form-wrapper">
+                <h2 class="auth-title" id="auth-modal-title">Login to Debuk Shop</h2>
+                <p class="auth-desc" id="auth-modal-desc">Please sign in to access curation files, your shopping tray, and secure payment processing options.</p>
+                <form id="modal-auth-form" class="auth-internal-form">
+                    <div class="form-group">
+                        <label for="auth-email">Email Address</label>
+                        <input type="email" id="auth-email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="auth-password">Password</label>
+                        <input type="password" id="auth-password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-submit-order" style="margin-top:1rem;" id="auth-submit-btn">Sign In</button>
+                </form>
+                <div class="auth-toggle-footer">
+                    <p id="auth-switch-text">New reader? <a href="#" id="auth-switch-link">Create an account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

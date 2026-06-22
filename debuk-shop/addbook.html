@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Studio | Debuk Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Debuk Shop.</a>
+            
+            <div class="search-wrapper">
+                <input type="text" id="global-search" class="search-input" placeholder="Search books..." disabled style="cursor: not-allowed; opacity: 0.5;">
+                <span class="search-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </span>
+            </div>
+
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="cart.html">Cart <span id="cart-count">(0)</span></a>
+                <a href="payment.html">Payment</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="addbook.html">Inventory</a>
+                <a href="#" id="auth-nav-btn" class="auth-btn-highlight">Login</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container section-padding" id="inventory-main-view">
+        <header class="dashboard-header-block">
+            <span class="subtitle">Administrative Portal</span>
+            <h1 class="page-title">Expand Book Collection</h1>
+        </header>
+
+        <div class="checkout-layout">
+            <form class="checkout-form" id="admin-add-book-form" novalidate>
+                <div class="form-section">
+                    <h2 class="form-section-title">Book Specifications</h2>
+                    
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="book-title">Book Title</label>
+                            <input type="text" id="book-title" required placeholder="e.g., The Old Man and the Sea">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="book-author">Author Name</label>
+                            <input type="text" id="book-author" required placeholder="e.g., Ernest Hemingway">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="book-genre">Collection Category (Genre)</label>
+                            <select id="book-genre" required style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit; font-size: 0.9rem; background: transparent; color: var(--text-primary);">
+                                <option value="Poetry">Poetry</option>
+                                <option value="Mystery">Mystery</option>
+                                <option value="Fiction">Fiction</option>
+                                <option value="Sci-Fi">Sci-Fi</option>
+                                <option value="Philosophy">Philosophy</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="book-price">Retail Price ($ USD)</label>
+                            <input type="number" id="book-price" required min="1" step="0.01" placeholder="e.g., 14.50">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="book-image-url">Cover Image URL</label>
+                            <input type="url" id="book-image-url" required placeholder="https://covers.openlibrary.org/b/id/...">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="book-description">Short Synopsis</label>
+                            <textarea id="book-description" rows="5" required placeholder="Write a pristine, high-end content overview mapping narrative arcs or stylistic references matching your active 20+ collection files..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit-order">Publish to Storefront</button>
+            </form>
+
+            <aside class="checkout-summary-panel">
+                <h2>Curation Reference</h2>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+                    Ensure custom cover paths use secure image endpoints. You can copy active catalog patterns from Open Library's structural database array codes to keep design profiles perfectly proportional.
+                </p>
+                <div class="receipt-data-box" style="margin-bottom: 0;">
+                    <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 600;">Image Reference Standard</div>
+                    <code style="font-size: 0.78rem; color: var(--text-primary); word-break: break-all;">https://covers.openlibrary.org/b/isbn/[13-Digit-ISBN]-L.jpg</code>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div class="auth-modal-overlay" id="auth-modal">
+        <div class="auth-modal-card">
+            <button class="auth-close-btn" id="auth-close-btn">&times;</button>
+            <div id="auth-form-wrapper">
+                <h2 class="auth-title" id="auth-modal-title">Login to Debuk Shop</h2>
+                <p class="auth-desc" id="auth-modal-desc">Please sign in to access curation files, your shopping tray, and secure payment processing options.</p>
+                <form id="modal-auth-form" class="auth-internal-form">
+                    <div class="form-group">
+                        <label for="auth-email">Email Address</label>
+                        <input type="email" id="auth-email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="auth-password">Password</label>
+                        <input type="password" id="auth-password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-submit-order" style="margin-top:1rem;" id="auth-submit-btn">Sign In</button>
+                </form>
+                <div class="auth-toggle-footer">
+                    <p id="auth-switch-text">New reader? <a href="#" id="auth-switch-link">Create an account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
