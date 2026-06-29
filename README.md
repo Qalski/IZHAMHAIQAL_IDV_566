@@ -1,89 +1,77 @@
-readme_content = """# Debuk Shop — Advanced Bookstore Management & Content Management Ecosystem
+# 📚 Debuk Shop — Advanced Bookstore Management & Content Management Ecosystem
 
-### Course Code: IMS566 (Advanced Web Design Development and Content Management)
-### Project Type: Individual Assignment Prototype
-### Developed By: Muhd Izham Haiqal Bin Mohd Zamzuri
-### Academic Institution: Universiti Teknologi MARA (UiTM) Puncak Perdana
-
----
-
-## 1. Project Overview & Description
-**Debuk Shop** is a premium, minimalist independent online bookstore interface engineered to showcase advanced front-end content management concepts, stateful user interactions, and robust data visualization capabilities. Built entirely on client-side web technologies, this platform functions dynamically without requiring server-side or cloud database connections by anchoring its complete operational state within browser storage (`localStorage`).
-
-The system is architected around **Role-Based Access Control (RBAC)** to separate standard consumers from administrators. Regular users enjoy a seamless boutique shopping journey from catalog curation to an advanced, masked payment terminal. Meanwhile, administrative accounts unlock an exclusive management ecosystem featuring dynamic statistical tickers, automated layout animations, and real-time inventory injection modules.
+> **⚠️ EXAMINER / EVALUATOR NOTICE: ADMINISTRATIVE ACCESS**
+> To immediately test the backend management features, please use the following hardcoded credentials on the login page:
+> * **Admin Email:** `admin@debukshop.com`
+> * **Admin Password:** `1234`
 
 ---
 
-## 2. Core Strategic Features
+## 📖 1. Project Overview & Description
+**Debuk Shop** is a premium, minimalist independent online bookstore interface engineered to showcase advanced front-end content management concepts, stateful user interactions, and robust data visualization capabilities. 
 
-### A. Role-Based Authentication Gateway (`index.html`)
+Built entirely on client-side web technologies, this platform functions dynamically without requiring server-side or cloud database connections by anchoring its complete operational state within browser storage (`localStorage`).
+
+The system is architected around **Role-Based Access Control (RBAC)** to securely separate standard consumers from administrators. Regular users enjoy a seamless boutique shopping journey from catalog curation to an advanced, masked payment terminal. Meanwhile, administrative accounts unlock an exclusive management ecosystem featuring dynamic statistical tickers, automated layout animations, and real-time inventory injection modules.
+
+---
+
+## ⚡ 2. Core Strategic Features
+
+### 🔐 Role-Based Authentication Gateway (`index.html`)
 * **Simulated Credential Registry:** Standard users can create persistent accounts locally via the registration panel. The login processor performs multi-field validation loops across browser memory records.
-* **Elevated Administrative Routing:** Detecting the specific administrative token (`admin@debukshop.com`) swaps the operational state, unrolls management features, and triggers an automated direct redirection to the performance desk.
-* **Automated Visual Error Feedback:** Empty required fields, unregistered profiles, or malformed inputs instantly halt submission loops, highlight input borders in high-contrast crimson red (`field-error`), and append contextual error hint strings directly under the target field box.
+* **Elevated Administrative Routing:** Detecting the specific administrative token swaps the operational state, unrolls management features, and triggers an automated redirect to the performance dashboard.
 
-### B. Dynamic Navigation UI Menu Tray (`All Pages`)
-* **Dynamic Menu Injection:** The main navbar row utilizes automated runtime assembly. When logged out or signed in as a regular customer, administrative options remain completely invisible. The exact second an admin authenticates, the JavaScript engine dynamically crafts and inserts the **Dashboard** and **Inventory** tabs right before the log button slot.
-* **Frosted-Glass Asymmetric Layout:** Features a fixed, sticky navbar using modern `backdrop-filter: blur(8px)` rendering. It uses `margin-right: auto` layout mechanics to close the center empty void, grouping the logo and expanded search box nicely on the left while anchoring interactive menus on the right.
-* **Full Responsive Adaptability:** Leverages fluid breakpoints and media queries to seamlessly collapse into an off-screen mobile burger menu layout panel on small display views.
+### 🧭 Dynamic Navigation UI Menu Tray 
+* **Dynamic Menu Injection:** The main navbar row utilizes automated runtime assembly. The exact second an admin authenticates, the JavaScript engine dynamically crafts and inserts the **Dashboard** and **Add** (Inventory) tabs.
+* **Frosted-Glass Retractable Layout:** Features a fixed, sticky navbar using modern `backdrop-filter: blur()` rendering that smartly auto-hides when you scroll down to maximize screen real estate.
 
-### C. Performance Reporting Management Dashboard (`dashboard.html`)
-* **Animated Summary Tickers:** Migrated from customer-facing profiles into the restricted administrative hub, these cards display lifetime books sold and gross store revenue. Counters fetch dynamic parameters from checkout data blocks and run fluid frame count-up entry animations.
-* **Live Channel Session Tickers:** Simulates live global reader activity on your site, randomly fluctuating concurrently active connections in real-time.
+### 📊 Performance Reporting Management Dashboard (`dashboard.html`)
+* **Animated Summary Tickers:** Restricted administrative hub displaying lifetime books sold and gross store revenue (formatted in RM). Counters fetch dynamic parameters from checkout data blocks and run fluid frame count-up entry animations.
+* **Live Session Analytics:** Features Chart.js data visualization components mapping live traffic volume (Line Graph) and genre popularity distribution (Bar Graph).
 
-### D. Advanced Data View & Structured Grid Systems (Minimum 2 Views)
-* **View 1 — Retail Curation Marketplace (`catalogue.html`):** Renders the library database using a modular CSS layout grid. Cards feature high-performance lazy-loading book covers, dynamic genre badge groupings, and interactive overlay description curtains that slide up smoothly on user hover.
-* **View 2 — Administrative Inventory Workspace (`addbook.html`):** A clean data capture form layout split into two functional columns (form controls on the left, architectural code syntax references on the right) providing a dedicated channel for catalog configuration.
-
-### E. Multi-Graph Data Visualization Components (`dashboard.html`)
-* **Chart 1 — Live Traffic Volume (Line Graph):** A Chart.js unique visitor tracking system utilizing custom vertical gradient area fills. An integrated background interval loop triggers every 5 seconds, generating occasional simulated site hits and visually climbing the canvas line step-by-step.
-* **Chart 2 — Genre Popularity Index (Horizontal Bar Graph):** A modern data distribution histogram mapping volume demand and unit distribution ratios across your individual curated literary genres (Poetry, Mystery, Fiction, Sci-Fi, Philosophy).
-
-### F. E-Commerce Utility & Masked Payment Pipeline (`cart.html`, `payment.html`)
+### 🛍️ E-Commerce Utility & Masked Payment Pipeline (`cart.html`)
 * **Persistent Shopping Tray:** Features quantity increments, line items reduction, and total clearance tools that automatically sync with browser state caches.
-* **Real-Time Input Masking:** Payment fields utilize strict input listeners to prevent text strings, format credit card digits automatically into uniform blocks (`0000 0000 0000 0000`), and inject date slashes safely (`MM/YY`).
-* **Luxury Success Overlay Modal:** Eliminates cheap browser alert popups, replacing them with a custom blurred backdrop modal overlay that maps receipt counts and charged currency fields instantly upon payment approval.
+* **Real-Time Input Masking:** Payment fields utilize strict input listeners to format credit card digits automatically into uniform blocks (`0000 0000 0000 0000`) and inject date slashes safely (`MM/YY`).
+* **Luxury Success Overlay Modal:** Eliminates cheap browser alert popups, replacing them with a custom frosted-glass backdrop modal overlay that maps receipt counts, charged currency fields, and a generated tracking ID instantly upon payment approval.
+
+### 🗄️ Administrative Inventory Workspace (`catalogue.html` & `addbook.html`)
+* **Real-time Price Editing & Deletion:** Admins can instantly alter the retail price of any item or purge it from the system entirely directly from the storefront UI.
+* **Inventory Injection:** A clean data capture form allowing admins to push new literature masterpieces into the dynamic `localStorage` array.
 
 ---
 
-## 3. System Architecture & Libraries Used
+## 🛠️ 3. System Architecture & Technologies Used
 * **Semantic HTML5 Grid Layouts:** Document fragments are built using crisp section dividers, labels, and structured data blocks to maintain an accessible content management profile.
-* **Custom CSS3 Variables:** Core theme maps dark high-contrast accents, muted secondary text layouts, and fluid transitions through systematic token variables.
-* **Modular JavaScript Engine (ES6+):** All features (cart modifications, input masks, validation layers, menu injection paths, security fences) run inside a singular unified core handler script (`js/main.js`).
-* **Chart.js Library:** Loaded via a high-speed CDN connection to render interactive graph canvases.
+* **Custom CSS3 Variables:** Core theme maps dark high-contrast accents, muted secondary text layouts, and fluid transitions through systematic token variables (Cyber-Neon Theme).
+* **Modular Vanilla JavaScript (ES6+):** All features (cart modifications, input masks, validation layers, menu injection paths, security fences) run inside a singular unified core handler script (`js/main.js`).
+* **Browser LocalStorage API:** Functions as the primary NoSQL relational database mapping user profiles, cart arrays, and dynamic inventory overrides.
+* **Chart.js Library:** Loaded via CDN to render interactive administrative graph canvases.
 
 ---
 
-## 4. Software Uniformity & Testing Environment
-In strict compliance with evaluation rules, this platform was developed, debugged, and optimized exclusively using **Google Chrome** as the primary web browser. This ensures complete software uniformity and perfect visual rendering between the student development view and the lecturer assessment pipeline.
+## 🧪 4. Testing Guide for Evaluators
+
+### Test Track A: Standard Customer Experience
+1. Open `index.html`.
+2. Click **Login** and switch to **Create an account**. Register a test user (e.g., `test@student.com`).
+3. Sign in with the new credentials. You will be routed to the `catalogue.html` page.
+4. Test the **Genre Filters** (Poetry, Mystery, etc.) and add items to your cart.
+5. Click the **Cart** tab. Test the `+` and `-` quantity modifiers.
+6. Fill out the checkout form. Observe the automatic credit card spacing.
+7. Click **Authorize & Approve Order** to view the custom success receipt modal.
+
+### Test Track B: Administrator Experience
+1. Click the navbar **Logout** button to clear your active consumer session.
+2. Log in using `admin@debukshop.com` / `1234`.
+3. You will be automatically routed to `dashboard.html`. Observe the animated number tickers and the live Chart.js graphs.
+4. Navigate to `catalogue.html`. Notice that "Add to Cart" buttons are replaced with **Edit Price** and **Remove** controls. Test altering a book's price.
+5. Navigate to the **Add** tab. Fill out the inventory form completely and publish a new book to watch it dynamically appear in the master catalogue.
 
 ---
 
-## 5. Detailed Steps to Test System Functions
-
-### Test Track A: Standard Customer / Consumer Experience
-1. Open your browser and navigate to the landing storefront dashboard screen (`index.html`).
-2. Click the **Login** link in the right-hand corner of the navbar.
-3. Click the **Create an account** switch link in the popup modal card to swap forms.
-4. Enter a valid email structure (e.g., `izham@student.com`), choose a password, and press **Register Account**.
-5. Once registered, switch back to the Sign-In view, fill out your new credentials, and hit submit. The engine will authorize your session and route you directly onto the bookstore collection page (`catalogue.html`).
-6. Browse the master catalog grid, filter by genre buttons, hover to view synopses, and add items to your tray.
-7. Click the **Cart** tab link, test the `+` or `-` buttons to modify units, and hit the **Proceed to Payment** shortcut.
-8. On the payment page, try submitting with empty inputs to trigger the red outlines. Test typing into the card field to watch the automatic spacing format in real-time. Fill out the fields completely and submit to experience the custom success modal overlay.
-
-### Test Track B: Elevated Administrator Workspace Experience
-1. Click the navbar **Logout** button to clear your active consumer cookies.
-2. Launch the authentication overlay card window again and enter these hardcoded assignment credentials:
-   * **Administrative Email:** `admin@debukshop.com`
-   * **Secret Access Password:** `1234`
-3. Click submit. The console will authorize your clearance, fire a welcome back alert, and **automatically redirect you straight onto `dashboard.html`**.
-4. Observe the admin dashboard: notice that the count-up entry loops animate perfectly, the active session ticker changes numbers, and both management graphs render live data.
-5. Inspect the navigation menu row—the JavaScript engine has cleanly injected both the **Dashboard** and **Inventory** link tabs.
-6. Click on **Inventory** (`addbook.html`). Test the input rules by entering negative integers in the pricing slot or leaving fields blank to view the red error walls.
-7. Complete the specifications fully by entering a title, author name, specific genre, price, custom book cover URL (using an Open Library track link or any direct web image path), and a summary text paragraph.
-8. Click **Publish to Storefront**. The script will commit your changes, fire a confirmation pop-up, and instantly route you to `catalogue.html` where your new title will be seamlessly loaded on the grid ready for checkout operations!
-\"\"\"
-
-with open("README.md", "w", encoding="utf-8") as file:
-    file.write(readme_content)
-
-print("File written successfully.")
+### 🎓 Academic Context
+* **Course Code:** IMS566 (Advanced Web Design Development and Content Management)
+* **Project Type:** Individual Assignment Prototype (Weightage: 20%)
+* **Developed By:** Muhd Izham Haiqal (Information Systems, IM245)
+* **Academic Institution:** Universiti Teknologi MARA (UiTM) Puncak Perdana
