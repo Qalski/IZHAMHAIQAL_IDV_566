@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart & Checkout | Debuk Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Debuk Shop.</a>
+            
+            <div class="search-wrapper">
+                <input type="text" id="global-search" class="search-input" placeholder="Search books..." disabled style="cursor: not-allowed; opacity: 0.5;">
+                <span class="search-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </span>
+            </div>
+
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About & Contact</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="cart.html" class="active">Cart & Checkout <span id="cart-count">(0)</span></a>
+                <a href="#" id="auth-nav-btn" class="auth-btn-highlight">Login</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container section-padding" id="cart-layout-container">
+        
+        <header class="dashboard-header-block">
+            <span class="subtitle">Review Selection</span>
+            <h1 class="page-title">Your Reading Tray</h1>
+        </header>
+
+        <div class="cart-table-wrapper" style="margin-bottom: 4rem; overflow-x: auto;">
+            <table class="cart-table" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th>Literature Masterwork</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items-tbody">
+                </tbody>
+            </table>
+        </div>
+
+        <hr style="border: 0; height: 1px; background-color: var(--border-color); margin: 4rem 0;" />
+
+        <div class="checkout-layout" id="checkout-payment-gate-section">
+            
+            <form class="checkout-form" id="payment-form" novalidate>
+                <div class="form-section">
+                    <h2 class="form-section-title">Billing Information</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="bill-name">Recipient Full Name</label>
+                            <input type="text" id="bill-name" required placeholder="e.g., Izham Haiqal">
+                        </div>
+                        <div class="form-group">
+                            <label for="bill-email">Correspondence Email</label>
+                            <input type="email" id="bill-email" required placeholder="you@example.com">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="bill-address">Mailing Destination Address</label>
+                            <input type="text" id="bill-address" required placeholder="Street address, Campus building, Suite code">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section" style="margin-top: 2.5rem;">
+                    <h2 class="form-section-title">Payment Details</h2>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="card-num">Credit / Debit Card Number</label>
+                            <input type="text" id="card-num" required maxlength="19" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-expiry">Expiration Date</label>
+                            <input type="text" id="card-expiry" required maxlength="5" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-cvc">Security Code (CVC)</label>
+                            <input type="password" id="card-cvc" required maxlength="4" placeholder="•••">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit-order" id="place-order-btn" style="margin-top: 2rem;">Authorize & Approve Order</button>
+            </form>
+
+            <aside class="checkout-summary-panel">
+                <h2>Invoice Summary</h2>
+                <div class="summary-row">
+                    <span>Gross Subtotal</span>
+                    <span id="summary-subtotal" class="font-medium">RM0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Secure Packaging & Shipping</span>
+                    <span style="color: #10b981; font-weight: 500;">Complimentary</span>
+                </div>
+                <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 1rem 0;">
+                <div class="summary-row total-row">
+                    <span>Total Due Amount</span>
+                    <span id="summary-total" style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary);">RM0.00</span>
+                </div>
+                
+                <div class="receipt-data-box" style="margin-top: 2rem;">
+                    <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 600;">Security Cryptography Protection</div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+                        Transactions processed via native 256-bit client-side masking algorithms. Your financial variable strings are encrypted directly within volatile memory buffers.
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div class="success-overlay" id="success-purchase-modal">
+        <div class="success-modal-card">
+            
+            <header style="margin-bottom: 2.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 1rem;">
+                <span class="subtitle" style="color: #10b981; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">Order Approved ✓</span>
+                <h2 style="font-size: 2.2rem; margin-top: 0.25rem; color: var(--text-primary); font-weight: 700; letter-spacing: -0.02em;">Congratulations for buying!</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem; font-weight: 300;">Your premium literary acquisitions have been securely packaged and logged into our fulfillment sequence registry.</p>
+            </header>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-primary); margin-bottom: 1rem; font-weight: 600;">Itemised Manifest</h3>
+                <div id="receipt-books-list" style="background: var(--bg-primary); padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 2px;">
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div>
+                    <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 600;">Billing Recipient</h3>
+                    <p id="receipt-billing-name" style="font-size: 0.95rem; margin: 0; color: var(--text-primary); font-weight: 500;"></p>
+                    <p id="receipt-billing-email" style="font-size: 0.85rem; margin: 0.25rem 0 0 0; color: var(--text-muted);"></p>
+                </div>
+                <div style="text-align: right;">
+                    <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 600;">Total Capital Settled</h3>
+                    <strong id="receipt-cost" style="font-size: 1.6rem; color: var(--accent-color); font-weight: 700;">RM0.00</strong>
+                    <p style="font-size: 0.75rem; color: #10b981; margin: 0.25rem 0 0 0; font-weight: 500;">Secured via 256-Bit Cryptography</p>
+                </div>
+            </div>
+
+            <div style="background: var(--bg-primary); color: #ffffff; padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 2px; margin-bottom: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                <div style="text-align: left;">
+                    <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); display: block; margin-bottom: 0.25rem;">Assigned Logistic Courier</span>
+                    <strong id="receipt-courier-name" style="font-size: 1rem; font-weight: 500; color: var(--text-primary);">PosLaju National Desk</strong>
+                    
+                    <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); display: block; margin-top: 1rem; margin-bottom: 0.25rem;">Tracking Airway Reference ID</span>
+                    <code id="receipt-tracking-id" style="font-family: monospace; font-size: 0.9rem; color: var(--accent-color); font-weight: 600; letter-spacing: 0.05em;">PL-RANDOM</code>
+                </div>
+                <div style="text-align: right; display: flex; flex-direction: column; justify-content: center; border-left: 1px solid var(--border-color); padding-left: 1.5rem;">
+                    <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); display: block; margin-bottom: 0.25rem;">Estimated Fulfillment Window</span>
+                    <strong id="receipt-eta" style="font-size: 1.05rem; font-weight: 500; color: #ffffff;">3 - 5 Business Days</strong>
+                    <p style="font-size: 0.75rem; color: rgba(255,255,255,0.4); margin: 0.25rem 0 0 0; font-weight: 300;">Delivery parameters fully operational</p>
+                </div>
+            </div>
+            
+            <button class="btn-success-route" id="btn-success-confirm" style="width: 100%; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Return to Catalogue</button>
+        </div>
+    </div>
+
+    <div class="auth-modal-overlay" id="auth-modal">
+        <div class="auth-modal-card">
+            <button class="auth-close-btn" id="auth-close-btn">&times;</button>
+            <div id="auth-form-wrapper">
+                <h2 class="auth-title" id="auth-modal-title">Login to Debuk Shop</h2>
+                <p class="auth-desc" id="auth-modal-desc">Please sign in to access curation files, your shopping tray, and secure payment processing options.</p>
+                <form id="modal-auth-form" class="auth-internal-form">
+                    <div class="form-group">
+                        <label for="auth-email">Email Address</label>
+                        <input type="email" id="auth-email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="auth-password">Password</label>
+                        <input type="password" id="auth-password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-submit-order" style="margin-top:1rem;" id="auth-submit-btn">Sign In</button>
+                </form>
+                <div class="auth-toggle-footer">
+                    <p id="auth-switch-text">New reader? <a href="#" id="auth-switch-link">Create an account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

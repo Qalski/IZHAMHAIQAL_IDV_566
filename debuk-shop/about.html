@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & Contact | Debuk Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Debuk Shop.</a>
+            
+            <div class="search-wrapper">
+                <input type="text" id="global-search" class="search-input" placeholder="Search books..." disabled style="cursor: not-allowed; opacity: 0.5;">
+                <span class="search-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </span>
+            </div>
+
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="cart.html">Cart <span id="cart-count">(0)</span></a>
+                
+                <a href="#" id="auth-nav-btn" class="auth-btn-highlight">Login</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <header style="margin-bottom: 4rem; max-width: 680px;">
+            <span class="subtitle">Our Identity</span>
+            <h1 class="page-title" style="margin-bottom: 1.5rem;">The Curated Mind behind Debuk Shop</h1>
+            <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); font-weight: 300;">
+                Debuk Shop is a high-end independent bookstore ecosystem designed and engineered by **Mr. Muhd Izham Haiqal**, an Information Systems scholar at UiTM Puncak Perdana. This platform explores advanced front-end telemetry patterns, content curation frameworks, and accessible data layouts.
+            </p>
+        </header>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 4rem; margin-bottom: 5rem;">
+            <div>
+                <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; color: var(--text-primary);">01 / Core Vision</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); font-weight: 300;">
+                    To establish a leading minimalist literary archive platform that preserves critical cultural masterworks and offers readers intuitive, state-persisting inventory workflows.
+                </p>
+            </div>
+            <div>
+                <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; color: var(--text-primary);">02 / Operational Mission</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); font-weight: 300;">
+                    To implement optimized client-side layout codebases that combine fluid UX design paradigms with transparent telemetry reporting for modern data presentation.
+                </p>
+            </div>
+            <div>
+                <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; color: var(--text-primary);">03 / Core Objectives</h3>
+                <ul style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted); font-weight: 300; padding-left: 1.2rem; margin: 0;">
+                    <li>Provide dynamic content categorizations using flexible data-driven filtering systems.</li>
+                    <li>Secure transaction validation paths through strict localized authentication structures.</li>
+                    <li>Exhibiting clean, organized front-end codebases for responsive design analysis.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr style="border: 0; height: 1px; background-color: var(--border-color); margin: 6rem 0;" />
+
+        <!-- FIXED CONTACT SPECIFIC ARCHITECTURE CONTAINER -->
+        <div class="contact-layout-wrapper">
+            
+            <!-- LEFT COLUMN: CURATED CONTACT CARD FORM -->
+            <form class="contact-card-form" id="contact-form-element" novalidate>
+                <span class="subtitle">Get In Touch</span>
+                <h2 style="font-size: 1.75rem; margin-top: 0.25rem; color: var(--text-primary);">With Us!</h2>
+                
+                <div class="form-grid" style="margin-top: 2rem;">
+                    <div class="form-group">
+                        <label for="contact-name">Full Name</label>
+                        <input type="text" id="contact-name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="contact-message">Message / Enquiry Text</label>
+                        <textarea id="contact-message" rows="5" required placeholder="Type your message details here..."></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit-contact">Submit Message</button>
+            </form>
+
+            <!-- RIGHT COLUMN: CAMPUS DESK INFRASTRUCTURE PANEL -->
+            <aside class="contact-sidebar-panel">
+                <h2>Campus Desk</h2>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+                    For direct academic enquiries, project auditing details, or structural repository data reviews, you can leave an electronic dispatch reference here.
+                </p>
+                <div class="receipt-data-box" style="margin-bottom: 0;">
+                    <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 600;">Location Mapping</div>
+                    <p style="font-size: 0.82rem; color: var(--text-primary); margin: 0; font-weight: 400; line-height: 1.4;">
+                        UiTM Puncak Perdana Campus<br>
+                        Faculty of Information Sciences<br>
+                        Shah Alam, Selangor
+                    </p>
+                </div>
+            </aside>
+            
+        </div>
+    </main>
+
+    <div class="auth-modal-overlay" id="auth-modal">
+        <div class="auth-modal-card">
+            <button class="auth-close-btn" id="auth-close-btn">&times;</button>
+            <div id="auth-form-wrapper">
+                <h2 class="auth-title" id="auth-modal-title">Login to Debuk Shop</h2>
+                <p class="auth-desc" id="auth-modal-desc">Please sign in to access curation files, your shopping tray, and secure payment processing options.</p>
+                <form id="modal-auth-form" class="auth-internal-form">
+                    <div class="form-group">
+                        <label for="auth-email">Email Address</label>
+                        <input type="email" id="auth-email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="auth-password">Password</label>
+                        <input type="password" id="auth-password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-submit-order" style="margin-top:1rem;" id="auth-submit-btn">Sign In</button>
+                </form>
+                <div class="auth-toggle-footer">
+                    <p id="auth-switch-text">New reader? <a href="#" id="auth-switch-link">Create an account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
